@@ -14,17 +14,17 @@ public class BinarySearchAlgorithm {
         {
             int mid = start + (end-start)/2;
 
-            if(targetElement == arr[mid])
-            {
-                return mid;
-            }
-            else if (targetElement < arr[mid])
+            if (targetElement < arr[mid])
             {
                 end = mid - 1;
             }
             else if (targetElement > arr[mid])
             {
                 start = mid + 1;
+            }
+            else
+            {
+                return mid;
             }
         }
         return -1;
