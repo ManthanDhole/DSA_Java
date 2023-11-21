@@ -7,9 +7,9 @@ import java.util.List;
 public class Find_All_missing_numbers_inArray {
     public static void main(String[] args) {
 //        int[] arr = {9,6,4,2,3,7,10,1};
-        int[] arr = {4,3,2,7,8,2,3,1};
-//        int[] arr = {4,0,2,1};
-//        int[] arr = {0,1};
+//        int[] arr = {4,3,2,7,8,2,3,1};
+//        int[] arr = {4,2,1};
+        int[] arr = {1,1};
         System.out.println("Initial Array Elements: " + Arrays.toString(arr));
         CycleSortAlgorithm(arr);
         System.out.println("Final Array Elements: " + Arrays.toString(arr));
