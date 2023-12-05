@@ -10,7 +10,8 @@ public class Pattern_Threory {
 //        starPatternAscDescTriangle(5);
 //        rightAngledTrianglewithSpaces(5);
 //        invertedRightAngledTrianglewithSpaces(5);
-        equilateralTriangle(5);
+//        equilateralTriangle(5);
+        invertedEquilateralTriangle(5);
 
     }
 
@@ -136,6 +137,34 @@ public class Pattern_Threory {
                 }
             }
             System.out.println();
+        }
+    }
+    public static void invertedEquilateralTriangle(int counts)
+    {
+        for(int rows = 1; rows <= counts; rows++)
+        {
+            for(int columns = 1; columns < (2*counts); columns++)
+            {
+                if (!(columns > rows-1))
+                {
+                    System.out.print(" ");
+                }
+                else if(columns <= (2*counts - rows))
+                {
+                    System.out.print("*");
+                }
+            }
+            System.out.println();
+        }
+    }
+    public static void equilateralTriangleWithSpaces(int counts)
+    {
+        for(int rows = 1; rows < counts; rows++)
+        {
+            for(int columns = 1; columns < (2*counts); columns++)
+            {
+
+            }
         }
     }
 }
