@@ -1,0 +1,39 @@
+On a fundamental level, everything that happens within the computers are on the levels of Binary Number system
+Also called as a Bit (0 or 1).
+
+In order to manipulate/manage/operate these bits using programming we have some operators that could perform this.
+
+There are 6 types of Operators for Bitwise Operations
+1. AND & => Will return true only if 2 comparing values are true
+                                            a  |  b  |  a&b
+                                            0  |  0  |   0
+                                            0  |  1  |   0
+                                            1  |  0  |   0
+                                            1  |  1  |   1
+
+2. OR | => Will return true if any one of the 2 comparing values are true. If both are false then it will return false
+                                            a  |  b  |  a|b
+                                            0  |  0  |   0
+                                            0  |  1  |   1
+                                            1  |  0  |   1
+                                            1  |  1  |   1
+
+3. XOR ^ => Will return true if any one of the 2 comparing values are true. If both are either true or false it will return false
+                                            a  |  b  |  a&b
+                                            0  |  0  |   0
+                                            0  |  1  |   1
+                                            1  |  0  |   1
+                                            1  |  1  |   0
+
+4. Complement ~ => Will return the opposite of that value
+                                            a  |  ~a
+                                            0  |   1
+                                            1  |   0
+5. Left Shift Operator << : Will shift the entire binary representation to left. a << b = a * 2^b
+                                    Add 0 if a new number is required.
+                                    a << 1 : 1010 << 1 == 10100   :double the original number
+
+6. Right Shit Operator >> : Will shift the entire binary representation to right. a >> b =  a / 2^b
+                                    Preceding 0's are ignored.
+                                    a >> 1 : 1010 >> 1 == 101   :half the original number
+
