@@ -37,3 +37,10 @@ There are 6 types of Operators for Bitwise Operations
                                     Preceding 0's are ignored.
                                     a >> 1 : 1010 >> 1 == 101   :half the original number
 
+
+--------------------------------------------------------------------------------------------------------------
+How to find the range of a number which can be stored in n number of bits?
+
+Formula: -2^(n-1) to 2^(n-1) - 1
+Ex: 1 byte => 8 bits: -2^7 to 2^7 - 1 => -128 to 127
+

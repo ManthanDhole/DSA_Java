@@ -2,7 +2,12 @@ public class Find_single_element_inArray {
     public static void main(String[] args) {
         int[] arr = {4,1,3,2,3,1,6,2,4};
 //        int[] arr = {-4,-1,-3,-2,3,1,6,2,4};
-        XORArrayTOFindSingleElement(arr);
+//        XORArrayTOFindSingleElement(arr);
+
+        int[] array3TimesRepetition = {1,2,3,1,3,2,5,3,2,1,1,2,3};
+//        int[] array3TimesRepetition = {2,2,3,2,7,7,8,7,8,8};
+        findSingleElementInArrayOf_MultipleElements(array3TimesRepetition, 4);
+
     }
 
     public static void XORArrayTOFindSingleElement(int[] arr)
@@ -24,5 +29,54 @@ public class Find_single_element_inArray {
 //
 //        }
         System.out.println(ans);;
+    }
+
+    public static void findSingleElementInArrayOf_MultipleElements(int[] arr, int repetitionOfDigits)
+    {
+        int finalBitSet = 0;
+        for(int i = 0; i<8; i++)
+        {
+            int count = 0;
+            for(int num: arr) {
+                int setBit = num & (1 << i);
+                if (setBit != 0) {
+                    count++;
+                }
+            }
+            System.out.println(count);
+            finalBitSet = finalBitSet + ((int)Math.pow(10,i) * count);
+        }
+        System.out.println("Final Bitset: " + finalBitSet);
+
+        int remainderBinary = findRemainder(finalBitSet, repetitionOfDigits);
+        System.out.println("Remainder Binary: " + remainderBinary);
+
+        int finalNumber = 0;
+        int count = 0;
+        while(remainderBinary > 0)
+        {
+            int digit = remainderBinary % 10;
+            if(digit != 0)
+            {
+                finalNumber = finalNumber + (1 << count);
+            }
+            count++;
+            remainderBinary = remainderBinary/10;
+        }
+        System.out.println("Final Number: " + finalNumber);
+
+    }
+    public static int findRemainder(int num, int repetitionOfDigits)
+    {
+        int remainderNumber = 0;
+        int count = 0;
+        while(num > 0)
+        {
+            int digit = num % 10;
+            remainderNumber = remainderNumber + ((int)Math.pow(10, count) * (digit % repetitionOfDigits));
+            count++;
+            num = num/10;
+        }
+        return remainderNumber;
     }
 }
